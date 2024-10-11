@@ -560,8 +560,8 @@ MonoBehaviour:
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
   m_VolumeFrameworkUpdateModeOption: 2
-  m_RenderPostProcessing: 1
-  m_Antialiasing: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
   m_AntialiasingQuality: 2
   m_StopNaN: 0
   m_Dithering: 0
@@ -1382,6 +1382,30 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 18.7}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &656345977 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -8435647823508574796, guid: 12a0ef23b710fa0429e5f634d00a3277,
+    type: 3}
+  m_PrefabInstance: {fileID: 1066852156}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &656345981
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 656345977}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 1
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 3.3
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &821042906
 GameObject:
   m_ObjectHideFlags: 0
@@ -1931,30 +1955,6 @@ MonoBehaviour:
   m_FirstSelected: {fileID: 0}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
---- !u!1 &1012129380 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6245899128926395530, guid: 12a0ef23b710fa0429e5f634d00a3277,
-    type: 3}
-  m_PrefabInstance: {fileID: 1066852156}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1012129384
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1012129380}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  outlineMode: 0
-  outlineColor: {r: 0, g: 1, b: 0.008599281, a: 1}
-  outlineWidth: 2
-  precomputeOutline: 0
-  bakeKeys: []
-  bakeValues: []
 --- !u!1 &1024341794
 GameObject:
   m_ObjectHideFlags: 0
@@ -2200,12 +2200,36 @@ Transform:
   - {fileID: 1428961567}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1063639676 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 12a0ef23b710fa0429e5f634d00a3277,
+    type: 3}
+  m_PrefabInstance: {fileID: 1066852156}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1063639677 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 12a0ef23b710fa0429e5f634d00a3277,
     type: 3}
   m_PrefabInstance: {fileID: 1066852156}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1063639678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1063639676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 2
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1001 &1066852156
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3143,10 +3167,14 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 6245899128926395530, guid: 12a0ef23b710fa0429e5f634d00a3277,
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 12a0ef23b710fa0429e5f634d00a3277,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1012129384}
+      addedObject: {fileID: 1063639678}
+    - targetCorrespondingSourceObject: {fileID: -8435647823508574796, guid: 12a0ef23b710fa0429e5f634d00a3277,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 656345981}
     - targetCorrespondingSourceObject: {fileID: 2130412920329743522, guid: 12a0ef23b710fa0429e5f634d00a3277,
         type: 3}
       insertIndex: -1
@@ -3923,7 +3951,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1012129384}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
         m_MethodName: set_enabled
         m_Mode: 6
