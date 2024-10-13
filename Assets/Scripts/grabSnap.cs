@@ -5,31 +5,35 @@ using UnityEngine.XR.Interaction.Toolkit.Interactables;
 
 public class grabsnap : MonoBehaviour
 {
+    public GameObject thisMarker;
     public GameObject ghost;
+    public GameObject successsound;
     public GameObject nextComponent;
     public GameObject nextGhost;
+    public GameObject nextMarker;
+    private AudioSource successaudiosource;
     private XRGrabInteractable interactable;
     // Start is called before the first frame update
     void Start()
     {
         interactable = GetComponent<XRGrabInteractable>();
+        successaudiosource=successsound.GetComponent<AudioSource>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        if(interactable.isSelected)
+        {
+            thisMarker.SetActive(false);
+        }
     }
 
-    private void OnCollisionEnter(Collision collision)
-    {
-        
-    }
     private void OnTriggerEnter(Collider other)
     {
         
-            if (other.gameObject == ghost)
+        if (other.gameObject == ghost)
             {
+                successaudiosource.Play();
                 ghost.SetActive(false);
                 GetComponent<BoxCollider>().enabled = false;
                 GetComponent<XRGrabInteractable>().enabled = false;
@@ -40,6 +44,7 @@ public class grabsnap : MonoBehaviour
                 {
                     nextComponent.GetComponent<BoxCollider>().enabled = true;
                     nextComponent.GetComponent<XRGrabInteractable>().enabled=true;
+                    nextMarker.SetActive(true);
                     nextGhost.SetActive(true);
                 }
                 else
@@ -47,7 +52,7 @@ public class grabsnap : MonoBehaviour
                     nextComponent.SetActive(true);
                 }
                 
-            }
+            }    
         
         
     }
