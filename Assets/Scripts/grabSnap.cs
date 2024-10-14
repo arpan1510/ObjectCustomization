@@ -11,6 +11,8 @@ public class grabsnap : MonoBehaviour
     public GameObject nextComponent;
     public GameObject nextGhost;
     public GameObject nextMarker;
+    public GameObject checkmark;
+
     private AudioSource successaudiosource;
     private XRGrabInteractable interactable;
     // Start is called before the first frame update
@@ -40,12 +42,16 @@ public class grabsnap : MonoBehaviour
                 Destroy(GetComponent<Rigidbody>());
                 transform.position = ghost.transform.position;
                 transform.rotation = ghost.transform.rotation;
-                if(!(nextGhost.gameObject.name== "Assembly Complete"))
+                
+                checkmark.SetActive(true);
+            if (!(nextGhost.gameObject.name== "Assembly Complete"))
                 {
                     nextComponent.GetComponent<BoxCollider>().enabled = true;
                     nextComponent.GetComponent<XRGrabInteractable>().enabled=true;
+                    nextComponent.GetComponent<AudioSource>().Play();
                     nextMarker.SetActive(true);
                     nextGhost.SetActive(true);
+                    
                 }
                 else
                 {
