@@ -1,11 +1,13 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI; // For UI elements
+using UnityEngine.UI;
 
 public class FloorTextureChanger : MonoBehaviour
 {
-    public Renderer floorRenderer;   // Assign the floor object (or material) in the Inspector
+    public Renderer floorRenderer;   // Assign the floor material in the Inspector
     public Texture[] textures;       // Array of texture options to switch between
-    public Button[] textureButtons;  // Buttons to change texture
+    public Button[] textureButtons;  // Buttons to change texture in UI
 
     void Start()
     {
@@ -21,7 +23,7 @@ public class FloorTextureChanger : MonoBehaviour
     {
         if (index >= 0 && index < textures.Length)
         {
-            // Set the selected texture to the floor material
+            // selected texture will be assigned to the floor material
             floorRenderer.material.mainTexture = textures[index];
         }
     }

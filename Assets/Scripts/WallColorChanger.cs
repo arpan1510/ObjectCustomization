@@ -1,9 +1,11 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI; // For UI elements
+using UnityEngine.UI;
 
 public class WallColorChanger : MonoBehaviour
 {
-    public Renderer wallRenderer;  // Assign the wall object (or material) in the Inspector
+    public Renderer wallRenderer;  // Assign the wall material in the Inspector
     public Slider redSlider;       // Slider to adjust red value
     public Slider greenSlider;     // Slider to adjust green value
     public Slider blueSlider;      // Slider to adjust blue value
